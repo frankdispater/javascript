@@ -1,0 +1,11 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 100px auto 100px; 
+    column-gap: 5px;
+    row-gap: 5px;
+  }
