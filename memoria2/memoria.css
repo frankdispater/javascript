@@ -1,0 +1,100 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 100px auto 100px; 
+    column-gap: 5px;
+    row-gap: 5px;
+    position: relative;
+    left: 20px;
+    bottom: -10px;
+    
+    
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: black;
+     }
+
+  html {
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+    heigh:665px;
+    background-image: url("https://i.postimg.cc/W1z1cC0P/imagen-2022-05-12-195552125.png");
+    background-size: cover;
+  background-repeat:no-repeat;
+  background-position: center center;
+  }
+
+
+  /* From uiverse.io by @Botwe-Felix5820 */
+button {
+  height: 2.8em;
+  width: 9em;
+  background: transparent;
+  -webkit-animation: jello-horizontal 0.9s both;
+  animation: jello-horizontal 0.9s both;
+  border: 2px solid #016DD9;
+  outline: none;
+  color: #016DD9;
+  font-size: 17px;
+
+  
+ }
+ 
+ button:hover {
+  background: #016DD9;
+  color: #ffffff;
+  animation: squeeze3124 0.9s both;
+  
+ }
+ 
+ 
+ @keyframes squeeze3124 {
+  0% {
+   -webkit-transform: scale3d(1, 1, 1);
+   transform: scale3d(1, 1, 1);
+  }
+ 
+  30% {
+   -webkit-transform: scale3d(1.25, 0.75, 1);
+   transform: scale3d(1.25, 0.75, 1);
+  }
+ 
+  40% {
+   -webkit-transform: scale3d(0.75, 1.25, 1);
+   transform: scale3d(0.75, 1.25, 1);
+  }
+ 
+  50% {
+   -webkit-transform: scale3d(1.15, 0.85, 1);
+   transform: scale3d(1.15, 0.85, 1);
+  }
+ 
+  65% {
+   -webkit-transform: scale3d(0.95, 1.05, 1);
+   transform: scale3d(0.95, 1.05, 1);
+  }
+ 
+  75% {
+   -webkit-transform: scale3d(1.05, 0.95, 1);
+   transform: scale3d(1.05, 0.95, 1);
+  }
+ 
+  100% {
+   -webkit-transform: scale3d(1, 1, 1);
+   transform: scale3d(1, 1, 1);
+  }
+ }
+ 
