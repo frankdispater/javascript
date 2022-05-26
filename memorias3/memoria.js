@@ -168,29 +168,88 @@ document.addEventListener('DOMContentLoaded', () => {
       if(primeraOpcionId == segundaOpcionId) {
         cartas[primeraOpcionId].setAttribute('src', 'imagenes/dorso.png')
         cartas[segundaOpcionId].setAttribute('src', 'imagenes/dorso.png')
-        alert('Dale click a otra imagen, no a la misma... boludo')
+        //alert('Dale click a otra imagen, no a la misma... boludo')
+        let timerInterval
+Swal.fire({
+  title: 'Dale click a otra imagen, no a la misma... boludo!',
+  html: 'se cerrara en <b></b> millisegundos.',
+  timer: 2000,
+  timerProgressBar: true,
+  
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
       }
       else if (cartaEscogida[0] === cartaEscogida[1]) {
-        alert('Encontraste la pareja')
+        //alert('Encontraste la pareja')
+        let timerInterval
+Swal.fire({
+  title: 'Encontraste una pareja!',
+  html: 'se cerrara en <b></b> millisegundos.',
+  timer: 1200,
+  timerProgressBar: true,
+  
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
         cartas[primeraOpcionId].setAttribute('src', 'imagenes/blanco.png')
         cartas[segundaOpcionId].setAttribute('src', 'imagenes/blanco.png')
        cartaGanadoras.push(cartaEscogida)
       } else {
         cartas[primeraOpcionId].setAttribute('src', 'imagenes/dorso.png')
         cartas[segundaOpcionId].setAttribute('src', 'imagenes/dorso.png')
-        alert('Intentalo de nuevo, bobo.')
-      }
+        let timerInterval
+Swal.fire({
+  title: 'Intenta de nuevo!',
+  html: 'se cerrara en <b></b> millisegundos.',
+  timer: 700,
+  timerProgressBar: true,
+  
 
- /*      if(primeraOpcionId === segundaOpcionId){
-        cartas[primeraOpcionId].setAttribute('src', 'imagenes/dorso.png')
-        cartas[segundaOpcionId].setAttribute('src', 'imagenes/dorso.png')
-        alert('esta imagen blabla')
-      }
-localStorage.getItem('dorso', primeraOpcionId.length, segundaOpcionId.length) */
+  didOpen: () => {
+    Swal.showLoading()
+    const b = Swal.getHtmlContainer().querySelector('b')
+    timerInterval = setInterval(() => {
+      b.textContent = Swal.getTimerLeft()
+    }, 100)
+  },
+  willClose: () => {
+    clearInterval(timerInterval)
+  }
+}).then((result) => {
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log('I was closed by the timer')
+  }
+})
+}
 
-     
+
+  
       cartaPorId = []
-      numeroIntentos = []
       cartaEscogida = []
       resultadoPantalla.textContent = cartaGanadoras.length
       localStorage.setItem("result", cartaGanadoras.length)
