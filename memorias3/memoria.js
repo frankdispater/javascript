@@ -1,126 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const arregloCartas = [
-      {
-        nombre: 'burger',
-        img: 'imagenes/burger.gif'
-      },
-      {
-        nombre: 'burger',
-        img: 'imagenes/burger.gif'
-      },
-      {
-        nombre: 'castor',
-        img: 'imagenes/castor.gif'
-      },
-      {
-        nombre: 'castor',
-        img: 'imagenes/castor.gif'
-      },
-      {
-        nombre: 'desayuno',
-        img: 'imagenes/desayuno.gif'
-      },
-      {
-        nombre: 'desayuno',
-        img: 'imagenes/desayuno.gif'
-      },
-      {
-        nombre: 'dona',
-        img: 'imagenes/dona.gif'
-      },
-      {
-        nombre: 'dona',
-        img: 'imagenes/dona.gif'
-      },
-      {
-        nombre: 'heffer',
-        img: 'imagenes/heffer.gif'
-      },
-      {
-        nombre: 'heffer',
-        img: 'imagenes/heffer.gif'
-      },
-      {
-        nombre: 'hell',
-        img: 'imagenes/hell.gif'
-      },
-      {
-        nombre: 'hell',
-        img: 'imagenes/hell.gif'
-      },
-      {
-        nombre: 'minion',
-        img: 'imagenes/minion.gif'
-      },
-      {
-        nombre: 'minion',
-        img: 'imagenes/minion.gif'
-      },
-      {
-        nombre: 'pan',
-        img: 'imagenes/pan.gif'
-      },
-      {
-        nombre: 'pan',
-        img: 'imagenes/pan.gif'
-      },
-      {
-        nombre: 'pancake',
-        img: 'imagenes/pancake.gif'
-      },
-      {
-        nombre: 'pancake',
-        img: 'imagenes/pancake.gif'
-      },
-      {
-        nombre: 'pepe',
-        img: 'imagenes/pepe.gif'
-      },
-      {
-        nombre: 'pepe',
-        img: 'imagenes/pepe.gif'
-      },
-      {
-        nombre: 'soya',
-        img: 'imagenes/soya.gif'
-      },
-      {
-        nombre: 'soya',
-        img: 'imagenes/soya.gif'
-      },
-      {
-        nombre: 'sushiroll',
-        img: 'imagenes/sushiroll.gif'
-      },
-      {
-        nombre: 'sushiroll',
-        img: 'imagenes/sushiroll.gif'
-      },
-      {
-        nombre: 'sushiroll2',
-        img: 'imagenes/sushiroll2.gif'
-      },
-      {
-        nombre: 'sushiroll2',
-        img: 'imagenes/sushiroll2.gif'
-      },
-      {
-        nombre: 'sushiroll3',
-        img: 'imagenes/sushiroll3.gif'
-      },
-      {
-        nombre: 'sushiroll3',
-        img: 'imagenes/sushiroll3.gif'
-      },
-      {
-        nombre: 'sushiroll4',
-        img: 'imagenes/sushiroll4.gif'
-      },
-      {
-        nombre: 'sushiroll4',
-        img: 'imagenes/sushiroll4.gif'
-      },
-     ]
+    
+    let arregloCartas = []
+
+  const traerCartas = async () => {
+    let response = await fetch("memoriacartas.json")
+    let data = await response.json();
+    arregloCartas = data;
+  }
+   console.log(traerCartas);
   // .sort para ordenarlos de una para que aparezcan de forma aleatoria anadiendole el math.random
   //
     arregloCartas.sort(() => 0.5 - Math.random())
